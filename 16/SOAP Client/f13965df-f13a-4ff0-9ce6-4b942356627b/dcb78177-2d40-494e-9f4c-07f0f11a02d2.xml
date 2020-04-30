@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>dcb78177-2d40-494e-9f4c-07f0f11a02d2</Id>
+  <Type>connector-action</Type>
+  <Name>New Web Services SOAP Client Connector Operation 6</Name>
+  <Version>4</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>wssoapclientsdk</Value>
+    </Property>
+    <Property>
+      <Name>action-type</Name>
+      <Value>EXECUTE</Value>
+    </Property>
+    <Property>
+      <Name>parameter-profile</Name>
+      <Value>377ce86b-9e3f-4a24-8c69-a800479b0104</Value>
+    </Property>
+    <Property>
+      <Name>output-profile</Name>
+      <Value>6ca7c0c2-ff72-4ec9-bdf8-c7fcc038d90d</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="6ca7c0c2-ff72-4ec9-bdf8-c7fcc038d90d"
+    refId="response-profile"
+    name="Web Services SOAP Client executeAdd EXECUTE Response 2" />
+    <Ref compId="377ce86b-9e3f-4a24-8c69-a800479b0104"
+    refId="request-profile"
+    name="Web Services SOAP Client executeAdd EXECUTE Request" />
+  </References>
+  <Description />
+  <Object>
+    <Operation trackResponse="false"
+    returnApplicationErrors="false">
+      <Archiving enabled="false" directory="" />
+      <Configuration>
+        <GenericOperationConfig operationType="EXECUTE"
+        objectTypeId="executeAdd" objectTypeName="executeAdd"
+        requestProfile="377ce86b-9e3f-4a24-8c69-a800479b0104"
+        responseProfile="6ca7c0c2-ff72-4ec9-bdf8-c7fcc038d90d"
+        requestProfileType="xml" responseProfileType="xml">
+          <field id="exposeRequestEnvelope" value="false"
+          type="boolean" />
+          <field id="exposeResponseEnvelope" value="false"
+          type="boolean" />
+          <field id="attachmentCache" type="component" />
+          <cookie role="INPUT">
+            <value>&lt;?xml version="1.0" encoding="UTF-8"
+            standalone="yes"?&gt;&lt;WebServiceOperation
+            operationName="executeAdd"
+            soapAction="executeAdd"&gt;&lt;WebServiceConnection
+            url="https://connect.boomi.com/ws/soap"/&gt;&lt;WebServiceMetaData&gt;&lt;WebServiceDescription
+            serviceName="WebServiceProvider"
+            serviceNamespace="http://www.boomi.com/connector/wss"
+            portName="WebServiceProviderPort"
+            bindingStyle="document" bindingUse="literal"
+            bindingProtocol="soap_1_1"&gt;&lt;Operations&gt;&lt;WebServiceOperation
+            operationName="executeAdd" soapAction="executeAdd"
+            operationUse="literal"
+            operationStyle="document"&gt;&lt;Inputs
+            messageName="executeAdd"
+            messageNamespace="http://www.boomi.com/connector/wss"&gt;&lt;Parameter
+            hidden="false"
+            soapLocation="body"&gt;&lt;name&gt;executeAdd&lt;/name&gt;&lt;elementName&gt;executeAdd&lt;/elementName&gt;&lt;elementNS&gt;http://www.boomi.com/connector/wss&lt;/elementNS&gt;&lt;/Parameter&gt;&lt;/Inputs&gt;&lt;Outputs
+            messageName="executeAddResponse"
+            messageNamespace="http://www.boomi.com/connector/wss"&gt;&lt;Parameter
+            hidden="false"
+            soapLocation="body"&gt;&lt;name&gt;executeAddResponse&lt;/name&gt;&lt;elementName&gt;executeAddResponse&lt;/elementName&gt;&lt;elementNS&gt;http://www.boomi.com/connector/wss&lt;/elementNS&gt;&lt;/Parameter&gt;&lt;/Outputs&gt;&lt;CustomConfiguration&gt;&lt;comBoomiWsRpcOptionalParameters&gt;true&lt;/comBoomiWsRpcOptionalParameters&gt;&lt;/CustomConfiguration&gt;&lt;/WebServiceOperation&gt;&lt;/Operations&gt;&lt;/WebServiceDescription&gt;&lt;/WebServiceMetaData&gt;&lt;/WebServiceOperation&gt;</value>
+          </cookie>
+          <Options>
+            <QueryOptions>
+              <Fields>
+                <ConnectorObject name="executeAdd">
+                  <FieldList>
+                    <ConnectorField name="AddResponse/AddResult"
+                    selected="true" type="decimal"
+                    typeNamespace="http://www.w3.org/2001/XMLSchema"
+                    filterable="true" sortable="true"
+                    selectable="true" />
+                  </FieldList>
+                </ConnectorObject>
+              </Fields>
+              <Inputs />
+            </QueryOptions>
+          </Options>
+        </GenericOperationConfig>
+      </Configuration>
+      <Tracking>
+        <TrackedFields />
+      </Tracking>
+      <Caching />
+    </Operation>
+  </Object>
+</Component>

@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/">
+  <Id>377ce86b-9e3f-4a24-8c69-a800479b0104</Id>
+  <Type>profile.xml</Type>
+  <Name>Web Services SOAP Client executeAdd EXECUTE Request</Name>
+  <Version>10</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties>
+    <Property>
+      <Name>xmlflavor</Name>
+      <Value>basic</Value>
+    </Property>
+  </Properties>
+  <References />
+  <Description />
+  <Object>
+    <XMLProfile modelVersion="2" strict="true">
+      <ProfileProperties>
+        <XMLGeneralInfo />
+        <XMLOptions encoding="utf8" respectMinOccurs="false"
+        respectMinOccursAlways="false" parseRespectMaxOccurs="true"
+        implicitElementOrdering="true" />
+      </ProfileProperties>
+      <DataElements>
+        <XMLElement key="45" name="executeAdd" useNamespace="12"
+        dataType="character" typeKey="3" typeName="executeAdd"
+        typeNamespace="http://www.boomi.com/connector/wss"
+        typeExpanded="true" minOccurs="1" maxOccurs="1"
+        isNode="true" isMappable="true">
+          <DataFormat>
+            <ProfileCharacterFormat />
+          </DataFormat>
+          <XMLNSDeclList>
+            <XMLNSDeclaration key="12" defaultNamespace="false"
+            isNode="true" isMappable="false" />
+          </XMLNSDeclList>
+          <XMLElement key="50" name="Add" useNamespace="16"
+          dataType="character" typeKey="7" typeName="Add"
+          typeNamespace="http://tempuri.org/" typeExpanded="true"
+          minOccurs="0" maxOccurs="1" isNode="true"
+          isMappable="true" validateData="false"
+          loopingOption="unique">
+            <DataFormat>
+              <ProfileCharacterFormat />
+            </DataFormat>
+            <XMLNSDeclList>
+              <XMLNSDeclaration key="16" defaultNamespace="false"
+              isNode="true" isMappable="false" />
+            </XMLNSDeclList>
+            <XMLElement key="51" name="intA" useNamespace="16"
+            dataType="number" typeKey="-1" minOccurs="1"
+            maxOccurs="1" isNode="true" isMappable="true"
+            validateData="false" loopingOption="unique">
+              <DataFormat>
+                <ProfileNumberFormat numberFormat="" />
+              </DataFormat>
+            </XMLElement>
+            <XMLElement key="52" name="intB" useNamespace="16"
+            dataType="number" typeKey="-1" minOccurs="1"
+            maxOccurs="1" isNode="true" isMappable="true"
+            validateData="false" loopingOption="unique">
+              <DataFormat>
+                <ProfileNumberFormat numberFormat="" />
+              </DataFormat>
+            </XMLElement>
+          </XMLElement>
+        </XMLElement>
+      </DataElements>
+      <Namespaces>
+        <XMLNamespace key="-1" prefix="ns3" name="Empty Namespace">
+          <Types />
+        </XMLNamespace>
+        <XMLNamespace key="16" prefix="ns2"
+        name="http://tempuri.org/">
+          <Types>
+            <Type typeKey="7" declarationClass="cType"
+            anonymous="false">
+              <XMLElement key="8" name="Add" useNamespace="16"
+              dataType="character" typeKey="7" typeName="Add"
+              typeNamespace="http://tempuri.org/"
+              typeExpanded="false" minOccurs="0" maxOccurs="1"
+              isNode="true" isMappable="true" validateData="false"
+              loopingOption="unique">
+                <DataFormat>
+                  <ProfileCharacterFormat />
+                </DataFormat>
+                <XMLElement key="9" name="intA" useNamespace="16"
+                dataType="number" minOccurs="1" maxOccurs="1"
+                isNode="true" isMappable="true">
+                  <DataFormat>
+                    <ProfileNumberFormat numberFormat="" />
+                  </DataFormat>
+                </XMLElement>
+                <XMLElement key="10" name="intB" useNamespace="16"
+                dataType="number" minOccurs="1" maxOccurs="1"
+                isNode="true" isMappable="true">
+                  <DataFormat>
+                    <ProfileNumberFormat numberFormat="" />
+                  </DataFormat>
+                </XMLElement>
+              </XMLElement>
+            </Type>
+          </Types>
+        </XMLNamespace>
+        <XMLNamespace key="12" prefix="ns1"
+        name="http://www.boomi.com/connector/wss">
+          <Types>
+            <Type typeKey="3" declarationClass="cType"
+            anonymous="false">
+              <XMLElement key="4" name="executeAdd"
+              useNamespace="12" dataType="character" typeKey="3"
+              typeName="executeAdd"
+              typeNamespace="http://www.boomi.com/connector/wss"
+              typeExpanded="false" minOccurs="0" maxOccurs="1"
+              isNode="true" isMappable="true" validateData="false"
+              loopingOption="unique">
+                <DataFormat>
+                  <ProfileCharacterFormat />
+                </DataFormat>
+                <XMLElement key="5" name="Add" useNamespace="16"
+                dataType="character" typeKey="7" typeName="Add"
+                typeNamespace="http://tempuri.org/"
+                typeExpanded="false" minOccurs="0" maxOccurs="1"
+                isNode="true" isMappable="true">
+                  <DataFormat>
+                    <ProfileCharacterFormat />
+                  </DataFormat>
+                </XMLElement>
+              </XMLElement>
+            </Type>
+          </Types>
+        </XMLNamespace>
+      </Namespaces>
+      <tagLists />
+    </XMLProfile>
+  </Object>
+</Component>

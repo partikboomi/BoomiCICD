@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>f13965df-f13a-4ff0-9ce6-4b942356627b</Id>
+  <Type>process</Type>
+  <Name>SOAP Client</Name>
+  <Version>22</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties>
+    <Property>
+      <Name>overrides-enabled</Name>
+      <Value>false</Value>
+    </Property>
+    <Property>
+      <Name>startshape-type</Name>
+      <Value>NOACTION</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="1ca1b154-600a-45a8-b0a1-9083786d52ec"
+    refId="shape2.connection"
+    name="New Web Services SOAP Client Connection 7" />
+    <Ref compId="dcb78177-2d40-494e-9f4c-07f0f11a02d2"
+    refId="shape2.operation"
+    name="New Web Services SOAP Client Connector Operation 6" />
+    <Ref compId="c75c426a-6c70-48fc-b6a5-0b2e60855d7a"
+    refId="shape5.connection"
+    name="New Web Services SOAP Client Connection 8" />
+    <Ref compId="2dfd2f2b-cf65-48c1-85b7-77386eb80ab3"
+    refId="shape5.operation"
+    name="New Web Services SOAP Client Connector Operation 7" />
+  </References>
+  <Description />
+  <Object>
+    <process allowSimultaneous="false" enableUserLog="false"
+    updateRunDates="true" processLogOnErrorOnly="false"
+    workload="general" purgeDataImmediately="false">
+      <shapes>
+        <shape name="shape1" userlabel="" image="start" x="96.0"
+        y="96.0" shapetype="start">
+          <configuration>
+            <noaction />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="unset"
+            x="226.0" y="124.0">
+              <linesegment name="shape1.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="130.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="130.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg3"
+              length="56" orient="horizontal" x="130.0"
+              y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg4"
+              length="19" orient="vertical" x="186.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg5"
+              length="40" orient="horizontal" x="186.0"
+              y="130.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape2" userlabel=""
+        image="connectoraction_icon" x="352.0" y="160.0"
+        shapetype="connectoraction">
+          <configuration>
+            <connectoraction operationId="dcb78177-2d40-494e-9f4c-07f0f11a02d2"
+            connectionId="1ca1b154-600a-45a8-b0a1-9083786d52ec"
+            actionType="EXECUTE" connectorType="wssoapclientsdk"
+            parameter-profile="377ce86b-9e3f-4a24-8c69-a800479b0104"
+            hideSettings="false" allowDynamicCredentials="NONE">
+              <parameters />
+            </connectoraction>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape2.dragpoint1" toShape="shape4"
+            x="656.0" y="249.0">
+              <linesegment name="shape2.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="386.0" y="175.0" />
+              <linesegment name="shape2.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="386.0" y="175.0" />
+              <linesegment name="shape2.dragpoint1.lineseg3"
+              length="143" orient="horizontal" x="386.0"
+              y="175.0" />
+              <linesegment name="shape2.dragpoint1.lineseg4"
+              length="80" orient="vertical" x="529.0" y="175.0" />
+              <linesegment name="shape2.dragpoint1.lineseg5"
+              length="127" orient="horizontal" x="529.0"
+              y="255.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape3" userlabel="" image="message_icon"
+        x="192.0" y="336.0" shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>&lt;executeAdd&gt; &lt;ns1:Add
+              xmlns:ns1="http://tempuri.org/"&gt;
+              &lt;ns1:intA&gt;3&lt;/ns1:intA&gt;
+              &lt;ns1:intB&gt;3&lt;/ns1:intB&gt; &lt;/ns1:Add&gt;
+              &lt;ns1:Add xmlns:ns1="http://tempuri.org/"&gt;
+              &lt;ns1:intA&gt;3&lt;/ns1:intA&gt;
+              &lt;ns1:intB&gt;3&lt;/ns1:intB&gt; &lt;/ns1:Add&gt;
+              &lt;/executeAdd&gt;</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape3.dragpoint1" toShape="shape5"
+            x="336.0" y="345.0">
+              <linesegment name="shape3.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="226.0" y="351.0" />
+              <linesegment name="shape3.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="226.0" y="351.0" />
+              <linesegment name="shape3.dragpoint1.lineseg3"
+              length="63" orient="horizontal" x="226.0"
+              y="351.0" />
+              <linesegment name="shape3.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="289.0" y="351.0" />
+              <linesegment name="shape3.dragpoint1.lineseg5"
+              length="47" orient="horizontal" x="289.0"
+              y="351.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape4" userlabel="" image="stop_icon"
+        x="672.0" y="240.0" shapetype="stop">
+          <configuration>
+            <stop continue="true" />
+          </configuration>
+          <dragpoints />
+        </shape>
+        <shape name="shape5" userlabel=""
+        image="connectoraction_icon" x="352.0" y="336.0"
+        shapetype="connectoraction">
+          <configuration>
+            <connectoraction operationId="2dfd2f2b-cf65-48c1-85b7-77386eb80ab3"
+            connectionId="c75c426a-6c70-48fc-b6a5-0b2e60855d7a"
+            actionType="EXECUTE" connectorType="wssoapclientsdk"
+            parameter-profile="356e52d8-e7bd-4256-89fd-7640091c9a6c"
+            hideSettings="false" allowDynamicCredentials="NONE">
+              <parameters />
+            </connectoraction>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape5.dragpoint1" toShape="shape4"
+            x="656.0" y="249.0">
+              <linesegment name="shape5.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="386.0" y="351.0" />
+              <linesegment name="shape5.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="386.0" y="351.0" />
+              <linesegment name="shape5.dragpoint1.lineseg3"
+              length="143" orient="horizontal" x="386.0"
+              y="351.0" />
+              <linesegment name="shape5.dragpoint1.lineseg4"
+              length="96" orient="vertical" x="529.0" y="255.0" />
+              <linesegment name="shape5.dragpoint1.lineseg5"
+              length="127" orient="horizontal" x="529.0"
+              y="255.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape6" userlabel="" image="message_icon"
+        x="224.0" y="160.0" shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>&lt;ns1:executeAdd
+              xmlns:ns1="http://www.boomi.com/connector/wss"&gt;
+              &lt;ns2:Add xmlns:ns2="http://tempuri.org/"&gt;
+              &lt;ns2:intA&gt;1&lt;/ns2:intA&gt;
+              &lt;ns2:intB&gt;4&lt;/ns2:intB&gt; &lt;/ns2:Add&gt;
+              &lt;ns2:Add xmlns:ns2="http://tempuri.org/"&gt;
+              &lt;ns2:intA&gt;1&lt;/ns2:intA&gt;
+              &lt;ns2:intB&gt;7&lt;/ns2:intB&gt; &lt;/ns2:Add&gt;
+              &lt;/ns1:executeAdd&gt;</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape6.dragpoint1" toShape="shape5"
+            x="336.0" y="345.0">
+              <linesegment name="shape6.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="258.0" y="175.0" />
+              <linesegment name="shape6.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="258.0" y="175.0" />
+              <linesegment name="shape6.dragpoint1.lineseg3"
+              length="47" orient="horizontal" x="258.0"
+              y="175.0" />
+              <linesegment name="shape6.dragpoint1.lineseg4"
+              length="176" orient="vertical" x="305.0" y="175.0" />
+              <linesegment name="shape6.dragpoint1.lineseg5"
+              length="31" orient="horizontal" x="305.0"
+              y="351.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+      </shapes>
+    </process>
+  </Object>
+</Component>
