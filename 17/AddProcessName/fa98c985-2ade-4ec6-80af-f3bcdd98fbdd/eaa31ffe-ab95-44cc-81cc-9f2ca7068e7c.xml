@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>eaa31ffe-ab95-44cc-81cc-9f2ca7068e7c</Id>
+  <Type>connector-action</Type>
+  <Name>Add</Name>
+  <Version>1</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties>
+    <Property>
+      <Name>action-type</Name>
+      <Value>EXECUTE</Value>
+    </Property>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>wssoapclientsdk</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="011f7d2c-6593-4eef-900d-e071540cf5e0"
+    refId="request-profile" name="AddProfile - Request" />
+    <Ref compId="db7594ac-392a-47ee-9153-12f2b6bbb890"
+    refId="response-profile" name="AddProfile - Response" />
+  </References>
+  <Object>
+    <Operation returnApplicationErrors="false"
+    trackResponse="false">
+      <Archiving directory="" enabled="false" />
+      <Configuration>
+        <GenericOperationConfig objectTypeId="Add"
+        objectTypeName="Add" operationType="EXECUTE"
+        requestProfile="011f7d2c-6593-4eef-900d-e071540cf5e0"
+        requestProfileName="011f7d2c-6593-4eef-900d-e071540cf5e0"
+        requestProfileType="xml"
+        responseProfile="db7594ac-392a-47ee-9153-12f2b6bbb890"
+        responseProfileName="Add - Response"
+        responseProfileType="xml">
+          <field id="attachmentCache" type="component" />
+          <field id="exposeResponseEnvelope" type="boolean"
+          value="false" />
+          <field id="exposeRequestEnvelope" type="boolean"
+          value="false" />
+          <cookie role="INPUT">
+            <value>&lt;?xml version="1.0" encoding="UTF-8"
+            standalone="yes"?&gt;&lt;WebServiceOperation
+            operationName="Add"
+            soapAction="http://tempuri.org/Add"&gt;&lt;WebServiceConnection
+            url="http://www.dneonline.com/calculator.asmx"/&gt;&lt;WebServiceMetaData&gt;&lt;WebServiceDescription
+            serviceName="Calculator"
+            serviceNamespace="http://tempuri.org/"
+            portName="CalculatorSoap" bindingStyle="document"
+            bindingUse="literal"
+            bindingProtocol="soap_1_1"&gt;&lt;Operations&gt;&lt;WebServiceOperation
+            operationName="Add" soapAction="http://tempuri.org/Add"
+            operationUse="literal"
+            operationStyle="document"&gt;&lt;Inputs
+            messageName="AddSoapIn"
+            messageNamespace="http://tempuri.org/"&gt;&lt;Parameter
+            hidden="false"
+            soapLocation="body"&gt;&lt;name&gt;Add&lt;/name&gt;&lt;elementName&gt;Add&lt;/elementName&gt;&lt;elementNS&gt;http://tempuri.org/&lt;/elementNS&gt;&lt;/Parameter&gt;&lt;/Inputs&gt;&lt;Outputs
+            messageName="AddSoapOut"
+            messageNamespace="http://tempuri.org/"&gt;&lt;Parameter
+            hidden="false"
+            soapLocation="body"&gt;&lt;name&gt;AddResponse&lt;/name&gt;&lt;elementName&gt;AddResponse&lt;/elementName&gt;&lt;elementNS&gt;http://tempuri.org/&lt;/elementNS&gt;&lt;/Parameter&gt;&lt;/Outputs&gt;&lt;CustomConfiguration&gt;&lt;comBoomiWsRpcOptionalParameters&gt;true&lt;/comBoomiWsRpcOptionalParameters&gt;&lt;/CustomConfiguration&gt;&lt;/WebServiceOperation&gt;&lt;/Operations&gt;&lt;/WebServiceDescription&gt;&lt;/WebServiceMetaData&gt;&lt;/WebServiceOperation&gt;</value>
+          </cookie>
+          <Options>
+            <QueryOptions>
+              <Fields>
+                <ConnectorObject name="Add" />
+              </Fields>
+            </QueryOptions>
+          </Options>
+        </GenericOperationConfig>
+      </Configuration>
+    </Operation>
+  </Object>
+</Component>
