@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>c75c426a-6c70-48fc-b6a5-0b2e60855d7a</Id>
+  <Type>connector-settings</Type>
+  <Name>New Web Services SOAP Client Connection 8</Name>
+  <Version>1</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>wssoapclientsdk</Value>
+    </Property>
+  </Properties>
+  <References />
+  <Description />
+  <Object>
+    <GenericConnectionConfig>
+      <field id="url"
+      value="https://connect.boomi.com/ws/soap/calc?wsdl"
+      type="string" />
+      <field id="endpoint"
+      value="https://connect.boomi.com/ws/soap/calc"
+      type="string" />
+      <field id="security" value="BASIC" type="string" />
+      <field id="username" value="boomipartiksingla-J311LD.LHER4X"
+      type="string" />
+      <field id="password"
+      value="QvXdtOROdss9oPxTni2aUHyoDZHUVIXc2MRYV8Cvk2Uv691rLtPVDgMY9UEu0nx5Ru/lLuv70BbK0fs0cAgEGsUq6uaXLDTV1YJWF3HUKUPaARFNUCAn2oLhD1EBRGlaNPKMwWKh1JDniZpNe5Dnq+AV9ZlZ39J1WNfpRroGCVU="
+      type="password" />
+      <field id="clientsslalias" type="privatecertificate" />
+      <field id="trustsslalias" type="publiccertificate" />
+      <field id="wsssecurityOptions" type="wssecurity">
+        <WSSecurityOptions />
+      </field>
+    </GenericConnectionConfig>
+  </Object>
+</Component>
