@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>b01d1451-e6fa-4342-af26-6f29767825eb</Id>
+  <Type>connector-settings</Type>
+  <Name>New HTTP Client Connection 13</Name>
+  <Version>2</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>http</Value>
+    </Property>
+  </Properties>
+  <References />
+  <Description />
+  <Object>
+    <HttpSettings url="http://localhost:9090/ws/simple/executeAdd"
+    authenticationType="NONE">
+      <AuthSettings user="" />
+      <OAuthSettings requestTokenURL="" accessTokenURL=""
+      authorizationURL="" consumerKey="" accessToken=""
+      suppressBlankAccessToken="false" realm="" />
+      <OAuth2Settings grantType="code">
+        <credentials clientId="" />
+        <authorizationTokenEndpoint url="">
+          <sslOptions />
+        </authorizationTokenEndpoint>
+        <authorizationParameters />
+        <accessTokenEndpoint url="">
+          <sslOptions />
+        </accessTokenEndpoint>
+        <accessTokenParameters />
+        <scope />
+      </OAuth2Settings>
+      <AwsSettings>
+        <credentials>
+          <accessKeyId />
+          <awsService>s3</awsService>
+          <customService />
+          <awsRegion>ap-northeast-1</awsRegion>
+          <customRegion />
+        </credentials>
+      </AwsSettings>
+      <SSLOptions clientauth="false" trustServerCert="false" />
+    </HttpSettings>
+  </Object>
+</Component>

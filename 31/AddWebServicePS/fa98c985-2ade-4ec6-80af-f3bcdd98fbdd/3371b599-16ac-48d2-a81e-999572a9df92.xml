@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>3371b599-16ac-48d2-a81e-999572a9df92</Id>
+  <Type>transform.map</Type>
+  <Name>New Add Map 20</Name>
+  <Version>3</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties />
+  <References>
+    <Ref compId="011f7d2c-6593-4eef-900d-e071540cf5e0"
+    refId="fromProfile" name="AddProfile - Request" />
+    <Ref compId="db7594ac-392a-47ee-9153-12f2b6bbb890"
+    refId="toProfile" name="AddProfile - Response" />
+  </References>
+  <Description />
+  <Object>
+    <Map fromProfile="011f7d2c-6593-4eef-900d-e071540cf5e0"
+    toProfile="db7594ac-392a-47ee-9153-12f2b6bbb890">
+      <Mappings>
+        <Mapping fromType="profile" fromKey="8"
+        fromKeyPath="*[@key='1']/*[@key='8']"
+        fromNamePath="Add/intA" toType="function" toKey="1"
+        toFunction="1" />
+        <Mapping fromType="profile" fromKey="10"
+        fromKeyPath="*[@key='1']/*[@key='10']"
+        fromNamePath="Add/intB" toType="function" toKey="2"
+        toFunction="1" />
+        <Mapping fromType="function" fromKey="2" fromFunction="1"
+        toType="profile" toKey="7"
+        toKeyPath="*[@key='1']/*[@key='7']"
+        toNamePath="AddResponse/AddResult" />
+      </Mappings>
+      <Functions optimizeExecutionOrder="true">
+        <FunctionStep key="1" position="1" name="Math Add"
+        type="MathAdd" x="10.0" y="10.0" category="Numeric"
+        cacheOption="none" sumEnabled="false" cacheEnabled="true">
+          <Inputs>
+            <Input key="1" name="Value" />
+            <Input key="2" name="Value to Add" />
+          </Inputs>
+          <Outputs>
+            <Output key="2" name="Result" />
+          </Outputs>
+          <Configuration />
+        </FunctionStep>
+      </Functions>
+      <Defaults>
+        <Default toKey="9" value="Success" />
+      </Defaults>
+      <DocumentCacheJoins />
+    </Map>
+  </Object>
+</Component>
