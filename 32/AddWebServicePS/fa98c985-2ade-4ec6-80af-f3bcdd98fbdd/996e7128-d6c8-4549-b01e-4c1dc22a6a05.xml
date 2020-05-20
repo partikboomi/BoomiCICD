@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>996e7128-d6c8-4549-b01e-4c1dc22a6a05</Id>
+  <Type>connector-action</Type>
+  <Name>Add</Name>
+  <Version>4</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties>
+    <Property>
+      <Name>action-type</Name>
+      <Value>Listen</Value>
+    </Property>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>wss</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="011f7d2c-6593-4eef-900d-e071540cf5e0"
+    refId="request-profile" name="AddProfile - Request" />
+    <Ref compId="db7594ac-392a-47ee-9153-12f2b6bbb890"
+    refId="response-profile" name="AddProfile - Response" />
+  </References>
+  <Description />
+  <Object>
+    <Operation trackResponse="false"
+    returnApplicationErrors="false">
+      <Archiving enabled="false" directory="" />
+      <Configuration>
+        <WebServicesServerListenAction operationType="EXECUTE"
+        objectName="Add" hasInput="true" hasOutput="true"
+        wrapInput="false" wrapOutput="false"
+        requestProfile="011f7d2c-6593-4eef-900d-e071540cf5e0"
+        responseProfile="db7594ac-392a-47ee-9153-12f2b6bbb890"
+        responseContentType="application/xml" inputType="singlexml"
+        outputType="singlexml" />
+      </Configuration>
+      <Tracking>
+        <TrackedFields />
+      </Tracking>
+      <Caching />
+    </Operation>
+  </Object>
+</Component>
