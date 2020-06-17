@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>49b89650-24a7-4aa6-a56c-cd0a07016602</Id>
+  <Type>connector-action</Type>
+  <Name>AddPartik</Name>
+  <Version>1</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties>
+    <Property>
+      <Name>action-type</Name>
+      <Value>Listen</Value>
+    </Property>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>wss</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="94f84531-5270-42cf-afaf-af913fb56517"
+    refId="request-profile" name="AddPartik - Request" />
+    <Ref compId="97716555-6446-4868-90f1-8ea19b9ecd12"
+    refId="response-profile" name="AddPartik - Response" />
+  </References>
+  <Object>
+    <Operation returnApplicationErrors="false"
+    trackResponse="false">
+      <Archiving directory="" enabled="false" />
+      <Configuration>
+        <WebServicesServerListenAction hasInput="true"
+        hasOutput="true" inputType="singlexml"
+        objectName="AddPartik" operationType="EXECUTE"
+        outputType="singlexml"
+        requestProfile="94f84531-5270-42cf-afaf-af913fb56517"
+        responseContentType="application/xml"
+        responseProfile="97716555-6446-4868-90f1-8ea19b9ecd12"
+        wrapInput="false" wrapOutput="false" />
+      </Configuration>
+    </Operation>
+  </Object>
+</Component>

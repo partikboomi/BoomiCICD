@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/">
+  <Id>97716555-6446-4868-90f1-8ea19b9ecd12</Id>
+  <Type>profile.xml</Type>
+  <Name>AddPartik - Response</Name>
+  <Version>1</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Object>
+    <XMLProfile modelVersion="2" strict="true">
+      <ProfileProperties>
+        <XMLGeneralInfo />
+        <XMLOptions encoding="utf8" implicitElementOrdering="true"
+        parseRespectMaxOccurs="true" />
+      </ProfileProperties>
+      <DataElements>
+        <XMLElement dataType="character" isMappable="true"
+        isNode="true" key="1" maxOccurs="1" minOccurs="1"
+        name="AddResponse" typeExpanded="false" typeKey="-1"
+        typeNamespace="http://tempuri.org/" useNamespace="2">
+          <DataFormat>
+            <ProfileCharacterFormat />
+          </DataFormat>
+          <XMLNSDeclList>
+            <XMLNSDeclaration defaultNamespace="false"
+            isMappable="false" isNode="true" key="2" />
+          </XMLNSDeclList>
+          <XMLElement dataType="number" isMappable="true"
+          isNode="true" key="7" loopingOption="unique"
+          maxOccurs="1" minOccurs="1" name="AddResult" typeKey="-1"
+          useNamespace="2" validateData="false">
+            <DataFormat>
+              <ProfileNumberFormat numberFormat="" />
+            </DataFormat>
+          </XMLElement>
+        </XMLElement>
+      </DataElements>
+      <Namespaces>
+        <XMLNamespace key="2" name="http://tempuri.org/"
+        prefix="ns1">
+          <Types>
+            <Type anonymous="true" declarationClass="cType"
+            typeKey="-3">
+              <XMLElement dataType="character" isMappable="true"
+              isNode="true" key="4" loopingOption="unique"
+              maxOccurs="1" minOccurs="0" name="AddResponse"
+              typeExpanded="false" typeKey="-3"
+              typeNamespace="http://tempuri.org/" useNamespace="2"
+              validateData="false">
+                <DataFormat>
+                  <ProfileCharacterFormat />
+                </DataFormat>
+                <XMLElement dataType="number" isMappable="true"
+                isNode="true" key="5" maxOccurs="1" minOccurs="1"
+                name="AddResult" useNamespace="2">
+                  <DataFormat>
+                    <ProfileNumberFormat numberFormat="" />
+                  </DataFormat>
+                </XMLElement>
+              </XMLElement>
+            </Type>
+          </Types>
+        </XMLNamespace>
+        <XMLNamespace key="-1" name="Empty Namespace" prefix="ns2">
+          <Types />
+        </XMLNamespace>
+      </Namespaces>
+    </XMLProfile>
+  </Object>
+</Component>

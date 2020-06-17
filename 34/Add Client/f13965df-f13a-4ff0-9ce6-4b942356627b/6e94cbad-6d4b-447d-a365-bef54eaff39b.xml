@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>6e94cbad-6d4b-447d-a365-bef54eaff39b</Id>
+  <Type>connector-action</Type>
+  <Name>New HTTP Client Connector Operation 13</Name>
+  <Version>1</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>http</Value>
+    </Property>
+    <Property>
+      <Name>action-type</Name>
+      <Value>Send</Value>
+    </Property>
+    <Property>
+      <Name>parameter-profile</Name>
+      <Value>EMBEDDED|HttpParameterChooser</Value>
+    </Property>
+  </Properties>
+  <References />
+  <Description />
+  <Object>
+    <Operation>
+      <Archiving enabled="false" directory="" />
+      <Configuration>
+        <HttpSendAction returnResponses="true"
+        requestProfileType="NONE" responseProfileType="NONE"
+        dataContentType="application/xml" methodType="POST"
+        returnErrors="true" followRedirects="false"
+        returnMimeResponse="false" mimePassthrough="false">
+          <requestHeaders />
+          <pathElements />
+          <responseHeaderMapping />
+          <reflectHeaders />
+        </HttpSendAction>
+      </Configuration>
+      <Tracking>
+        <TrackedFields />
+      </Tracking>
+      <Caching />
+    </Operation>
+  </Object>
+</Component>

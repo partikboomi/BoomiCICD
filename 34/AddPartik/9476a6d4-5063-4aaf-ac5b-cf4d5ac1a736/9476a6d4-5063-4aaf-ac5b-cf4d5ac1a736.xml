@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>9476a6d4-5063-4aaf-ac5b-cf4d5ac1a736</Id>
+  <Type>process</Type>
+  <Name>AddPartik</Name>
+  <Version>4</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties>
+    <Property>
+      <Name>overrides-enabled</Name>
+      <Value>false</Value>
+    </Property>
+    <Property>
+      <Name>startshape-action-type</Name>
+      <Value>Listen</Value>
+    </Property>
+    <Property>
+      <Name>startshape-type</Name>
+      <Value>CONNECTOR</Value>
+    </Property>
+    <Property>
+      <Name>startshape-connector-type</Name>
+      <Value>wss</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="49b89650-24a7-4aa6-a56c-cd0a07016602"
+    refId="shape1.operation" name="AddPartik" />
+    <Ref compId="0d490d11-03fb-4f4f-bebb-6abee70c9965"
+    refId="shape2.connection"
+    name="New Web Services SOAP Client Connection 5" />
+    <Ref compId="8bfc54eb-c014-43e6-9b5d-9f4d0025340c"
+    refId="shape2.operation" name="AddPartik" />
+  </References>
+  <Description />
+  <Object>
+    <process allowSimultaneous="true" enableUserLog="false"
+    updateRunDates="false" processLogOnErrorOnly="true"
+    workload="general">
+      <shapes>
+        <shape name="shape1" image="start" x="96.0" y="96.0"
+        shapetype="start">
+          <configuration>
+            <connectoraction operationId="49b89650-24a7-4aa6-a56c-cd0a07016602"
+            actionType="Listen" connectorType="wss"
+            hideSettings="true" />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape4"
+            x="128.0" y="25.0">
+              <linesegment name="shape1.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="130.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="130.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg3"
+              length="7" orient="horizontal" x="130.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg4"
+              length="80" orient="vertical" x="137.0" y="31.0" />
+              <linesegment name="shape1.dragpoint1.lineseg5"
+              length="-9" orient="horizontal" x="137.0" y="31.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape2" image="connectoraction_icon" x="288.0"
+        y="96.0" shapetype="connectoraction">
+          <configuration>
+            <connectoraction operationId="8bfc54eb-c014-43e6-9b5d-9f4d0025340c"
+            connectionId="0d490d11-03fb-4f4f-bebb-6abee70c9965"
+            actionType="EXECUTE" connectorType="wssoapclientsdk"
+            hideSettings="false" />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape2.dragpoint1" toShape="shape7"
+            x="512.0" y="105.0">
+              <linesegment name="shape2.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="322.0" y="111.0" />
+              <linesegment name="shape2.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="322.0" y="111.0" />
+              <linesegment name="shape2.dragpoint1.lineseg3"
+              length="103" orient="horizontal" x="322.0"
+              y="111.0" />
+              <linesegment name="shape2.dragpoint1.lineseg4"
+              length="0" orient="vertical" x="425.0" y="111.0" />
+              <linesegment name="shape2.dragpoint1.lineseg5"
+              length="87" orient="horizontal" x="425.0"
+              y="111.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape4" userlabel="" image="catcherrors_icon"
+        x="144.0" y="16.0" shapetype="catcherrors">
+          <configuration>
+            <catcherrors retryCount="0" catchAll="true" />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape4.dragpoint1" toShape="shape2"
+            identifier="default" text="Try" x="272.0" y="105.0">
+              <linesegment name="shape4.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="178.0" y="31.0" />
+              <linesegment name="shape4.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="178.0" y="31.0" />
+              <linesegment name="shape4.dragpoint1.lineseg3"
+              length="55" orient="horizontal" x="178.0" y="31.0" />
+              <linesegment name="shape4.dragpoint1.lineseg4"
+              length="80" orient="vertical" x="233.0" y="31.0" />
+              <linesegment name="shape4.dragpoint1.lineseg5"
+              length="39" orient="horizontal" label="Try" x="233.0"
+              y="111.0" />
+            </dragpoint>
+            <dragpoint name="shape4.dragpoint2" toShape="shape5"
+            identifier="error" text="Catch" x="336.0" y="281.0">
+              <linesegment name="shape4.dragpoint2.lineseg1"
+              length="0" orient="horizontal" x="178.0" y="31.0" />
+              <linesegment name="shape4.dragpoint2.lineseg2"
+              length="0" orient="vertical" x="178.0" y="31.0" />
+              <linesegment name="shape4.dragpoint2.lineseg3"
+              length="87" orient="horizontal" x="178.0" y="31.0" />
+              <linesegment name="shape4.dragpoint2.lineseg4"
+              length="256" orient="vertical" x="265.0" y="31.0" />
+              <linesegment name="shape4.dragpoint2.lineseg5"
+              length="71" orient="horizontal" label="Catch"
+              x="265.0" y="287.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape5" userlabel=""
+        image="returndocuments_icon" x="352.0" y="272.0"
+        shapetype="returndocuments">
+          <configuration>
+            <returndocuments label="" />
+          </configuration>
+          <dragpoints />
+        </shape>
+        <shape name="shape7" userlabel=""
+        image="returndocuments_icon" x="528.0" y="96.0"
+        shapetype="returndocuments">
+          <configuration>
+            <returndocuments label="" />
+          </configuration>
+          <dragpoints />
+        </shape>
+      </shapes>
+    </process>
+  </Object>
+</Component>
