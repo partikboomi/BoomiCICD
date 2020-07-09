@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>8bfc54eb-c014-43e6-9b5d-9f4d0025340c</Id>
+  <Type>connector-action</Type>
+  <Name>AddPartik</Name>
+  <Version>2</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties>
+    <Property>
+      <Name>action-type</Name>
+      <Value>EXECUTE</Value>
+    </Property>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>wssoapclientsdk</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="97716555-6446-4868-90f1-8ea19b9ecd12"
+    refId="response-profile" name="AddPartik - Response" />
+    <Ref compId="94f84531-5270-42cf-afaf-af913fb56517"
+    refId="request-profile" name="AddPartik - Request" />
+  </References>
+  <Description />
+  <Object>
+    <Operation trackResponse="false"
+    returnApplicationErrors="false">
+      <Archiving enabled="false" directory="" />
+      <Configuration>
+        <GenericOperationConfig operationType="EXECUTE"
+        objectTypeId="AddPartik" objectTypeName="AddPartik"
+        requestProfile="94f84531-5270-42cf-afaf-af913fb56517"
+        responseProfile="97716555-6446-4868-90f1-8ea19b9ecd12"
+        requestProfileName="94f84531-5270-42cf-afaf-af913fb56517"
+        responseProfileName="AddPartik - Response"
+        requestProfileType="xml" responseProfileType="xml">
+          <field id="exposeRequestEnvelope" value="false"
+          type="boolean" />
+          <field id="exposeResponseEnvelope" value="false"
+          type="boolean" />
+          <field id="attachmentCache" type="component" />
+          <cookie role="INPUT">
+            <value>&lt;?xml version="1.0" encoding="UTF-8"
+            standalone="yes"?&gt;&lt;WebServiceOperation
+            operationName="AddPartik"
+            soapAction="http://tempuri.org/AddPartik"&gt;&lt;WebServiceConnection
+            url="http://www.dneonline.com/calculator.asmx"/&gt;&lt;WebServiceMetaData&gt;&lt;WebServiceDescription
+            serviceName="Calculator"
+            serviceNamespace="http://tempuri.org/"
+            portName="CalculatorSoap" bindingStyle="document"
+            bindingUse="literal"
+            bindingProtocol="soap_1_1"&gt;&lt;Operations&gt;&lt;WebServiceOperation
+            operationName="AddPartik"
+            soapAction="http://tempuri.org/AddPartik"
+            operationUse="literal"
+            operationStyle="document"&gt;&lt;Inputs
+            messageName="AddSoapIn"
+            messageNamespace="http://tempuri.org/"&gt;&lt;Parameter
+            hidden="false"
+            soapLocation="body"&gt;&lt;name&gt;Add&lt;/name&gt;&lt;elementName&gt;Add&lt;/elementName&gt;&lt;elementNS&gt;http://tempuri.org/&lt;/elementNS&gt;&lt;/Parameter&gt;&lt;/Inputs&gt;&lt;Outputs
+            messageName="AddSoapOut"
+            messageNamespace="http://tempuri.org/"&gt;&lt;Parameter
+            hidden="false"
+            soapLocation="body"&gt;&lt;name&gt;AddResponse&lt;/name&gt;&lt;elementName&gt;AddResponse&lt;/elementName&gt;&lt;elementNS&gt;http://tempuri.org/&lt;/elementNS&gt;&lt;/Parameter&gt;&lt;/Outputs&gt;&lt;CustomConfiguration&gt;&lt;comBoomiWsRpcOptionalParameters&gt;true&lt;/comBoomiWsRpcOptionalParameters&gt;&lt;/CustomConfiguration&gt;&lt;/WebServiceOperation&gt;&lt;/Operations&gt;&lt;/WebServiceDescription&gt;&lt;/WebServiceMetaData&gt;&lt;/WebServiceOperation&gt;</value>
+          </cookie>
+          <Options>
+            <QueryOptions>
+              <Fields>
+                <ConnectorObject name="AddPartik" />
+              </Fields>
+            </QueryOptions>
+          </Options>
+        </GenericOperationConfig>
+      </Configuration>
+      <Tracking>
+        <TrackedFields />
+      </Tracking>
+      <Caching />
+    </Operation>
+  </Object>
+</Component>

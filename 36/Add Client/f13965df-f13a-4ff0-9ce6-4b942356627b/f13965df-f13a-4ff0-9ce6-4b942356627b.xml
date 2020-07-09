@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>f13965df-f13a-4ff0-9ce6-4b942356627b</Id>
+  <Type>process</Type>
+  <Name>Add Client</Name>
+  <Version>29</Version>
+  <FolderId name="Boomi Partik Singla/CICD_Demo">3405045</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties>
+    <Property>
+      <Name>overrides-enabled</Name>
+      <Value>false</Value>
+    </Property>
+    <Property>
+      <Name>startshape-type</Name>
+      <Value>NOACTION</Value>
+    </Property>
+  </Properties>
+  <References>
+    <Ref compId="b01d1451-e6fa-4342-af26-6f29767825eb"
+    refId="shape8.connection"
+    name="New HTTP Client Connection 13" />
+    <Ref compId="6e94cbad-6d4b-447d-a365-bef54eaff39b"
+    refId="shape8.operation"
+    name="New HTTP Client Connector Operation 13" />
+  </References>
+  <Description />
+  <Object>
+    <process allowSimultaneous="false" enableUserLog="false"
+    updateRunDates="true" processLogOnErrorOnly="false"
+    workload="general" purgeDataImmediately="false">
+      <shapes>
+        <shape name="shape1" userlabel="" image="start" x="96.0"
+        y="96.0" shapetype="start">
+          <configuration>
+            <noaction />
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape1.dragpoint1" toShape="shape6"
+            x="208.0" y="121.0">
+              <linesegment name="shape1.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="130.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="130.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg3"
+              length="47" orient="horizontal" x="130.0"
+              y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg4"
+              length="16" orient="vertical" x="177.0" y="111.0" />
+              <linesegment name="shape1.dragpoint1.lineseg5"
+              length="31" orient="horizontal" x="177.0"
+              y="127.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape4" userlabel="" image="stop_icon"
+        x="672.0" y="240.0" shapetype="stop">
+          <configuration>
+            <stop continue="true" />
+          </configuration>
+          <dragpoints />
+        </shape>
+        <shape name="shape6" userlabel="" image="message_icon"
+        x="224.0" y="112.0" shapetype="message">
+          <configuration>
+            <message combined="false">
+              <msgTxt>&lt;ns:Add xmlns:ns="http://tempuri.org/"&gt;
+              &lt;ns:intA&gt;4&lt;/ns:intA&gt;
+              &lt;ns:intB&gt;8&lt;/ns:intB&gt;
+              &lt;/ns:Add&gt;</msgTxt>
+              <msgParameters />
+            </message>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape6.dragpoint1" toShape="shape8"
+            x="400.0" y="105.0">
+              <linesegment name="shape6.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="258.0" y="127.0" />
+              <linesegment name="shape6.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="258.0" y="127.0" />
+              <linesegment name="shape6.dragpoint1.lineseg3"
+              length="79" orient="horizontal" x="258.0"
+              y="127.0" />
+              <linesegment name="shape6.dragpoint1.lineseg4"
+              length="16" orient="vertical" x="337.0" y="111.0" />
+              <linesegment name="shape6.dragpoint1.lineseg5"
+              length="63" orient="horizontal" x="337.0"
+              y="111.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+        <shape name="shape7" userlabel="" image="exception_icon"
+        x="192.0" y="256.0" shapetype="exception">
+          <configuration>
+            <exception title="" stopsingledoc="true"
+            stopProcessReturnSingleDoc="false">
+              <exMessage>Error Msg</exMessage>
+              <exParameters />
+            </exception>
+          </configuration>
+          <dragpoints />
+        </shape>
+        <shape name="shape8" userlabel=""
+        image="connectoraction_icon" x="416.0" y="96.0"
+        shapetype="connectoraction">
+          <configuration>
+            <connectoraction operationId="6e94cbad-6d4b-447d-a365-bef54eaff39b"
+            connectionId="b01d1451-e6fa-4342-af26-6f29767825eb"
+            actionType="Send" connectorType="http"
+            parameter-profile="EMBEDDED|HttpParameterChooser|6e94cbad-6d4b-447d-a365-bef54eaff39b"
+            hideSettings="false" allowDynamicCredentials="NONE">
+              <parameters />
+            </connectoraction>
+          </configuration>
+          <dragpoints>
+            <dragpoint name="shape8.dragpoint1" toShape="shape4"
+            x="656.0" y="249.0">
+              <linesegment name="shape8.dragpoint1.lineseg1"
+              length="0" orient="horizontal" x="450.0" y="111.0" />
+              <linesegment name="shape8.dragpoint1.lineseg2"
+              length="0" orient="vertical" x="450.0" y="111.0" />
+              <linesegment name="shape8.dragpoint1.lineseg3"
+              length="111" orient="horizontal" x="450.0"
+              y="111.0" />
+              <linesegment name="shape8.dragpoint1.lineseg4"
+              length="144" orient="vertical" x="561.0" y="111.0" />
+              <linesegment name="shape8.dragpoint1.lineseg5"
+              length="95" orient="horizontal" x="561.0"
+              y="255.0" />
+            </dragpoint>
+          </dragpoints>
+        </shape>
+      </shapes>
+    </process>
+  </Object>
+</Component>

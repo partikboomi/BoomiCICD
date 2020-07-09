@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Component xmlns:ns2="http://www.boomi.com/connector/annotation"
+xmlns:ns3="http://exacttarget.com/wsdl/partnerAPI"
+xmlns:ns4="urn:fault.partner.exacttarget.com"
+xmlns:ns5="http://schemas.boomi.com/sap/edi_dc40"
+xmlns:ns6="http://schemas.microsoft.com/2003/10/Serialization/"
+deleted="false">
+  <Id>0d490d11-03fb-4f4f-bebb-6abee70c9965</Id>
+  <Type>connector-settings</Type>
+  <Name>New Web Services SOAP Client Connection 5</Name>
+  <Version>1</Version>
+  <FolderId name="Boomi Partik Singla">1099848</FolderId>
+  <AccountId>boomipartiksingla-J311LD</AccountId>
+  <Properties>
+    <Property>
+      <Name>connector-type</Name>
+      <Value>wssoapclientsdk</Value>
+    </Property>
+  </Properties>
+  <References />
+  <Description />
+  <Object>
+    <GenericConnectionConfig>
+      <field id="url"
+      value="http://www.dneonline.com/calculator.asmx?wsdl"
+      type="string" />
+      <field id="endpoint"
+      value="http://www.dneonline.com/calculator.asmx"
+      type="string" />
+      <field id="security" value="NONE" type="string" />
+      <field id="username" value="" type="string" />
+      <field id="password" type="password" />
+      <field id="clientsslalias" type="privatecertificate" />
+      <field id="trustsslalias" type="publiccertificate" />
+      <field id="wsssecurityOptions" type="wssecurity">
+        <WSSecurityOptions />
+      </field>
+    </GenericConnectionConfig>
+  </Object>
+</Component>
